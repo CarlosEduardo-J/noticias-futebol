@@ -18,22 +18,32 @@ noticias/
 ├── noticias.py   # Script principal do projeto
 └── README.md
 
-⚙️ Como Executar o Projeto
+## ⚙️ Como Executar o Projeto
 
-1. Clone este repositório:
+1.  Clone este repositório:
 
-git clone https://github.com/CarlosEduardo-J/noticias-futebol.git
-cd noticias-futebol
+    ```bash
+    git clone https://github.com/CarlosEduardo-J/noticias-futebol.git
+    cd noticias-futebol
+    ```
 
+2.  Instale as dependências:
 
-2. Instale as dependências:
+    ```bash
+    pip install requests beautifulsoup4
+    ```
 
-pip install requests beautifulsoup4
+3.  Execute o script:
 
+    ```bash
+    python noticias.py
+    ```
 
-3. Execute o script:
+```
+## ⚠️ Aviso Legal (Disclaimer)
 
-python noticias.py
+Este projeto foi desenvolvido **exclusivamente para fins educacionais e de demonstração de habilidades** em programação e *web scraping*.
 
-
----
+* O conteúdo raspado (manchetes e links) é de propriedade intelectual do **Globo Esporte (GE)**.
+* O uso deste *script* deve respeitar rigorosamente os **Termos de Serviço** e as políticas de uso do *website* alvo.
+* O desenvolvedor não se responsabiliza pelo uso indevido do código que possa violar as leis de direitos autorais ou os termos do serviço do *site*.
