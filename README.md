@@ -1,49 +1,91 @@
-# 📰 Coletor de Notícias do Flamengo
+# ⚽ **FLAMENGO SCRAPER – Notícias Dinâmicas do GE** 🔴⚫  
+Web scraping com rolagem infinita utilizando Selenium + BeautifulSoup
 
-Este projeto é um **web scraper simples em Python** que coleta automaticamente as **últimas notícias do Flamengo** publicadas no [GE (Globo Esporte)](https://globoesporte.globo.com/futebol/times/flamengo/), utilizando as bibliotecas `requests` e `BeautifulSoup`.
+---
+
+## 📌 **Sobre o Projeto**
+
+Este projeto é um **Web Scraper avançado em Python** capaz de coletar **todas as últimas notícias do Flamengo** diretamente da página oficial do **GE (Globo Esporte)**.
+
+Ele utiliza **automação real do navegador**, simulando o comportamento humano (scroll infinito). Isso permite captar notícias que **não aparecem usando requisições HTTP simples**.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
-- **Python 3**
-- **requests** — para fazer as requisições HTTP  
-- **beautifulsoup4** — para extrair e analisar o conteúdo HTML  
+## ✨ **Destaques Técnicos**
+
+| Feature | Descrição | Habilidade Demonstrada |
+|--------|-----------|------------------------|
+| **Scroll Dinâmico** | Simula rolagem contínua até o carregamento completo das notícias. | Automação com Selenium |
+| **Gerenciamento de Driver** | Selenium Manager baixa automaticamente o driver correto do Chrome. | Configuração simples e portátil |
+| **Análise e Extração** | BeautifulSoup parseia todo o HTML para extrair títulos e links. | Web Scraping eficiente |
+| **Persistência de Dados** | Exporta os dados em `noticias_flamengo.json` com formatação organizada. | Manipulação de JSON |
 
 ---
+
+## 🛠️ **Tecnologias Utilizadas**
+
+| Tecnologia | Função | Ícone |
+|------------|--------|-------|
+| **Python 3** | Linguagem principal | 🐍 |
+| **Selenium** | Automação do navegador | 🌐 |
+| **BeautifulSoup 4** | Parsing e extração de HTML | 🥣 |
+| **JSON** | Formato de saída dos dados | 📜 |
+
+---
+
+## ⚙️ **Como Executar o Projeto**
+
+### 📌 **Pré-requisitos**
+- Python 3.x instalado  
+- Google Chrome instalado  
+- Selenium fará o download automático do driver correto ✔️
+
+---
+
+### 1️⃣ **Clonar o Repositório**
+
+```bash
+git clone https://github.com/CarlosEduardo-J/noticias-futebol.git
+cd noticias-futebol
+```
+
+### 2️⃣ **Instalar Dependências**
+
+```bash
+pip install selenium beautifulsoup4
+```
+
+### 3️⃣ Executar o Script
+
+```bash
+python noticias.py
+```
 
 ## 📁 Estrutura do Projeto
-```bash
-noticias/
-│
-├── noticias.py   # Script principal do projeto
-└── README.md
+noticias
+│── noticias.py
+│── noticias_flamengo.json   (gerado após a execução)
+│── README.md
 
-## ⚙️ Como Executar o Projeto
+## 📂 Saída do Projeto
 
-1.  Clone este repositório:
+Após a execução, será criado o arquivo:
 
-    ```bash
-    git clone https://github.com/CarlosEduardo-J/noticias-futebol.git
-    cd noticias-futebol
-    ```
+noticias_flamengo.json
 
-2.  Instale as dependências:
-
-    ```bash
-    pip install requests beautifulsoup4
-    ```
-
-3.  Execute o script:
-
-    ```bash
-    python noticias.py
-    ```
-
+Formato dos dados:
+```json
+[
+  {
+    "titulo": "Título da notícia após limpeza",
+    "link": "https://ge.globo.com/link-da-noticia"
+  }
+]
 ```
-## ⚠️ Aviso Legal (Disclaimer)
 
-Este projeto foi desenvolvido **exclusivamente para fins educacionais e de demonstração de habilidades** em programação e *web scraping*.
+## ⚠️ Aviso Legal
 
-* O conteúdo raspado (manchetes e links) é de propriedade intelectual do **Globo Esporte (GE)**.
-* O uso deste *script* deve respeitar rigorosamente os **Termos de Serviço** e as políticas de uso do *website* alvo.
-* O desenvolvedor não se responsabiliza pelo uso indevido do código que possa violar as leis de direitos autorais ou os termos do serviço do *site*.
+Este projeto foi criado exclusivamente para fins educacionais.
+Todo o conteúdo raspado pertence ao Globo Esporte (GE).
+Respeite os Termos de Uso, a política de privacidade e o robots.txt do site.
+O autor não se responsabiliza por usos indevidos do código.
